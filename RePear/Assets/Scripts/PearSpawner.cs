@@ -11,6 +11,8 @@ namespace UnityTemplateProjects
         public IntVariable pearCounter;
         private List<GameObject> pears;
         public Transform spawnPosition;
+        public GameEvent pearSpawned;
+        public int i = 200;
 
         public void Start()
         {
@@ -20,21 +22,21 @@ namespace UnityTemplateProjects
 
         public IEnumerator NumberedSpawner()
         {
-            int i = 2000;
             int k = 0;
             while (k < i)
             {
                 SpawnPear();
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.01f);
                 print("pear spawned");
                 k++;
             }
             
         }
-        public void SpawnPear()
+        public void SpawnPear() //This is the only function that should spawn pears. So give this thing all the attention it needs to do that efficiently
         {
             pears.Add(Instantiate(pearPrefab, spawnPosition));
             pearCounter.ApplyChange(+1);
+            pearSpawned.Raise();
         }
 
         public void DisableGravity()

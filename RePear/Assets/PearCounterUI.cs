@@ -6,17 +6,14 @@ using UnityEngine;
 
 public class PearCounterUI : MonoBehaviour
 {
-        private TextMeshProUGUI textDisplay;
+        public TextMeshProUGUI pearNumberDisplay, numberAdded;
+        
         public IntVariable pearNumber;
-
-        private void Start()
-        {
-                textDisplay = GetComponentInChildren<TextMeshProUGUI>();
-        }
+        
 
         public void UpdatePearNumber()
         {
-                textDisplay.text = pearNumber.Value.ToString();
+                pearNumberDisplay.text = pearNumber.Value.ToString();
         }
         
 }
