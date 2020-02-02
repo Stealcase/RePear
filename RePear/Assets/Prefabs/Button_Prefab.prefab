@@ -400,10 +400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materials:
   - {fileID: 2100000, guid: db2d301f5d10f624aad1260666694c09, type: 2}
-  - {fileID: 2100000, guid: 4fbd57db3e707b54b95cbf87c7e6ae4d, type: 2}
+  - {fileID: 2100000, guid: cecfa68fb52cab440bc49c4afeed852f, type: 2}
   rend: {fileID: 74019248914387611}
-  materialNmb: 3
-  waitTime: 1
+  materialNmb: 2
+  waitTime: 1.2
 --- !u!1001 &7730317996657559743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9843c20f819a8a419ebb8e0cba42056, type: 2}
+      objectReference: {fileID: 2100000, guid: cecfa68fb52cab440bc49c4afeed852f, type: 2}
     - target: {fileID: 7656510103620688420, guid: 9111708113e1c6242ba90161cf951513,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
