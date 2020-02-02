@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class InteractionDetector : MonoBehaviour
 {
@@ -51,7 +48,8 @@ public class InteractionDetector : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Interactable"))
-            print("Exit area of interaction");
+        {
+            print("Exit area of interaction"); 
             if (other.gameObject.GetComponent<IInteractable>() != null)
             {
                 var interact = other.GetComponent<IInteractable>();
@@ -63,5 +61,7 @@ public class InteractionDetector : MonoBehaviour
                 }
                 
             }
+        }
+  
     }
 }

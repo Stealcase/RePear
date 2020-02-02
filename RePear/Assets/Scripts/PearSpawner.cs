@@ -48,8 +48,8 @@ namespace UnityTemplateProjects
         public void SpawnPear() //This is the only function that should spawn pears. So give this thing all the attention it needs to do that efficiently
         {
             //pearList.Add(Instantiate(pearPrefab, spawnPosition));
-            
             StartCoroutine(PearRoutine());
+            pearSpawned.Raise();
           
         }
 
@@ -60,7 +60,6 @@ namespace UnityTemplateProjects
             {
                 pearList.Add(Instantiate(pearPrefab, spawnPosition));
                 pearCounter.ApplyChange(+1);
-                pearSpawned.Raise();
                 yield return new WaitForSeconds(0.01f);
                 i++;
             }
