@@ -14,7 +14,7 @@ namespace UnityTemplateProjects
         public Transform spawnPosition;
         public GameEvent pearSpawned, pearRateIncreased;
         public int i = 200;
-        public int pearsPerPress =1;
+        public float multiplierFloat =1;
         public bool multiplier= false;
 
         public void Start()
@@ -41,7 +41,10 @@ namespace UnityTemplateProjects
             {
                 pearAdder.ApplyChange(pearAdder.Value*2);
             }
-            pearAdder.ApplyChange(+1);
+
+            int i = pearAdder.Value;
+            i +=1;
+            pearAdder.SetValue(Mathf.RoundToInt(i * multiplierFloat));
             pearRateIncreased.Raise();
             
         }
