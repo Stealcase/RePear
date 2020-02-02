@@ -391,6 +391,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82712217391461128, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d9366e4c99996a848925923366687765, type: 3}
+    - target: {fileID: 82712217391461128, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2373170268163296586, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
@@ -2469,26 +2479,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TotalPearEventTracker
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120011107498609883, guid: f957d9205599b3545becbcb68172121c,
-        type: 3}
-      propertyPath: valueThresholds.Array.data[1]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120011107498609883, guid: f957d9205599b3545becbcb68172121c,
-        type: 3}
-      propertyPath: valueThresholds.Array.data[2]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120011107498609883, guid: f957d9205599b3545becbcb68172121c,
-        type: 3}
-      propertyPath: valueThresholds.Array.data[3]
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120011107498609883, guid: f957d9205599b3545becbcb68172121c,
-        type: 3}
-      propertyPath: valueThresholds.Array.data[4]
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f957d9205599b3545becbcb68172121c, type: 3}
