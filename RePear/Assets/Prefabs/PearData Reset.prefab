@@ -46,6 +46,6 @@ MonoBehaviour:
   pearCounter: {fileID: 11400000, guid: bccc720dbcc28b8458c268bc985a494d, type: 2}
   pearAdder: {fileID: 11400000, guid: 7c4237205cd312d41a85dc63013e7624, type: 2}
   sacrifices: {fileID: 11400000, guid: 51d5667fcd08b684ea2ae4e27b8478f1, type: 2}
-  sacrificeEventNumber: {fileID: 11400000, guid: 51d5667fcd08b684ea2ae4e27b8478f1,
+  sacrificeEventNumber: {fileID: 11400000, guid: 7df771742ec2bc046b02bd92f5421ee4,
     type: 2}
   totalEventNumber: {fileID: 11400000, guid: 6cb158d495f9d1543ab5c7c6cd6b70cf, type: 2}

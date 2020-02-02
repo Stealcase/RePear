@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4303215460127260657}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: 2.257, z: 0.661}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -142,11 +142,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: f6f51e8bbd6bdba4184584731e57579e, type: 3}
   - {fileID: 8300000, guid: fc0c718b94d9faf49b716bde299ac565, type: 3}
-  - {fileID: 8300000, guid: 82b44876be2589843a451121624729fc, type: 3}
   - {fileID: 8300000, guid: ea1a469849a37a947bf05c6fd832fef6, type: 3}
-  - {fileID: 8300000, guid: c76853d59bb405a4cad64bc818d2004f, type: 3}
+  - {fileID: 8300000, guid: a129b5687dfe16d44b92a1ff02419c87, type: 3}
+  - {fileID: 8300000, guid: 08b187715fdda4a44b95aa237848a88e, type: 3}
+  - {fileID: 8300000, guid: c06e614db8c7e134abb27af9cd82e630, type: 3}
+  - {fileID: 8300000, guid: 1643077df783c394a9f6ed087e39afb5, type: 3}
+  - {fileID: 8300000, guid: e4f337902b99e9549a0263714ee626c6, type: 3}
+  - {fileID: 8300000, guid: a4fd8364c38f4324c9c9478814bf5ce6, type: 3}
   source: {fileID: 4303215460127260661}
 --- !u!114 &4303215460127260663
 MonoBehaviour:
