@@ -8,13 +8,14 @@ namespace UnityTemplateProjects
     public class PearSpawner : MonoBehaviour
     {
         public GameObject pearPrefab;
-        public IntVariable pearCounter;
+        public IntVariable pearCounter, pearAdder;
         public GameObjectList pears;
         private List<GameObject> pearList;
         public Transform spawnPosition;
-        public GameEvent pearSpawned;
+        public GameEvent pearSpawned, pearRateIncreased;
         public int i = 200;
         public int pearsPerPress =1;
+        public bool multiplier= false;
 
         public void Start()
         {
@@ -36,7 +37,13 @@ namespace UnityTemplateProjects
 
         public void IncreasePearsPerPress()
         {
-            pearsPerPress++;
+            if (multiplier)
+            {
+                pearAdder.ApplyChange(pearAdder.Value*2);
+            }
+            pearAdder.ApplyChange(+1);
+            pearRateIncreased.Raise();
+            
         }
         public void SpawnPear() //This is the only function that should spawn pears. So give this thing all the attention it needs to do that efficiently
         {
@@ -49,7 +56,7 @@ namespace UnityTemplateProjects
         public IEnumerator PearRoutine()
         {
             int i = 0;
-            while (i < pearsPerPress)
+            while (i < pearAdder.Value)
             {
                 pearList.Add(Instantiate(pearPrefab, spawnPosition));
                 pearCounter.ApplyChange(+1);

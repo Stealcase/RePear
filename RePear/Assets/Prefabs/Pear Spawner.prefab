@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5193992976488037364}
   - component: {fileID: 5193992976488037367}
   - component: {fileID: 5193992976488037362}
+  - component: {fileID: 1707274392}
+  - component: {fileID: 1707274396}
   m_Layer: 0
   m_Name: Pear Spawner
   m_TagString: Untagged
@@ -49,9 +51,14 @@ MonoBehaviour:
   pearPrefab: {fileID: 6735156313333829613, guid: 7981ea04a3bf85f4ab7797c74e98d3ea,
     type: 3}
   pearCounter: {fileID: 11400000, guid: bccc720dbcc28b8458c268bc985a494d, type: 2}
+  pearAdder: {fileID: 11400000, guid: 7c4237205cd312d41a85dc63013e7624, type: 2}
+  pears: {fileID: 11400000, guid: f9f28f87ce044264faf212a6da8b36ac, type: 2}
   spawnPosition: {fileID: 5193992976488037365}
   pearSpawned: {fileID: 11400000, guid: b617394e9a0b14b4d89c479014a1b481, type: 2}
+  pearRateIncreased: {fileID: 11400000, guid: 227abf2cc9a644549be128c6b961043e, type: 2}
   i: 0
+  pearsPerPress: 1
+  multiplier: 0
 --- !u!114 &5193992976488037367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +113,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1707274392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193992976488037366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3742057f9c28025448be5d0677b5b1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 62e43ca218c89134291d3957bf82a8be, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5193992976488037364}
+        m_MethodName: IncreasePearsPerPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1707274396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193992976488037366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6351de84bedfaf547916cc113e9b9a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5193992976715658454
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ namespace DefaultNamespace
         public void Awake()
         {
             pearCounter.SetValue(0);
-            pearAdder.SetValue(0);
+            pearAdder.SetValue(1);
             sacrifices.SetValue(0);
             sacrificeEventNumber.SetValue(0);
             totalEventNumber.SetValue(0);

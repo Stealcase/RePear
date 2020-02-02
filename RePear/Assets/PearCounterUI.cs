@@ -8,7 +8,7 @@ public class PearCounterUI : MonoBehaviour
 {
         public TextMeshPro pearNumberDisplay, numberAdded;
         
-        public IntVariable pearNumber;
+        public IntVariable pearNumber, numberAdder;
         
 
         public void UpdatePearNumber()
@@ -36,5 +36,9 @@ public class PearCounterUI : MonoBehaviour
                 }
                 
         }
-        
+
+        public void UpdateNumberAdder()
+        {
+                numberAdded.text = "+" + numberAdder.Value.ToString();
+        }
 }
