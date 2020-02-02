@@ -28,10 +28,8 @@ public class InteractionDetector : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            print("Got button press");
             if (_interactables.Any())
             {
-                print("Trying to use the button");
                 _interactables[_interactables.Count-1].Use();
             }
         }

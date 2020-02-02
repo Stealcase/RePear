@@ -14,7 +14,11 @@
           <e p="README.txt" t="Include" />
         </e>
         <e p="PearCounterUI.cs" t="Include" />
+        <e p="PearRecycler.cs" t="Include" />
+        <e p="PearSpawnIncreaser.cs" t="Include" />
+        <e p="PlayRandomSound.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="Button.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="EventEditor.cs" t="Include" />
@@ -22,12 +26,18 @@
           <e p="EventThresholdTracker.cs" t="Include" />
           <e p="GameEvent.cs" t="Include" />
           <e p="GameEventListener.cs" t="Include" />
+          <e p="GameObjectList.cs" t="Include" />
+          <e p="IEventListener.cs" t="Include" />
           <e p="IInteractable.cs" t="Include" />
           <e p="InteractionDetector.cs" t="Include" />
           <e p="IntVariable.cs" t="Include" />
+          <e p="MaterialChanger.cs" t="Include" />
           <e p="PearCountReset.cs" t="Include" />
           <e p="PearSpawner.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
+          <e p="SoundEventListener.cs" t="Include" />
+          <e p="SoundStacker.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

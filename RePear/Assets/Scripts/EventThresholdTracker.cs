@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,22 +10,35 @@ public class EventThresholdTracker : MonoBehaviour
     public IntVariable eventNumber;
     public List<GameEvent> events;
     public List<int> valueThresholds;
+    public GameEvent audioEvent;
 
+    private void Start()
+    {
+
+    }
+
+    private void Update()
+    {
+        CheckThreshold();
+    }
 
     public void CheckThreshold()
     {
 
-        if (intValue.Value > valueThresholds[eventNumber.Value] && (events.Count-1) >= eventNumber.Value)
+        if (intValue.Value >= valueThresholds[eventNumber.Value] && (events.Count-1) >= eventNumber.Value)
         {
             if (events[eventNumber.Value] != null)
             {
+                audioEvent.Raise();
                 events[eventNumber.Value].Raise();
+                print(events[eventNumber.Value] + "Was Raised");
                 IncreaseEventNumber();
 
             }
             else
             {
                 print("Sacrifices went out of range");
+                return;
             }
         }
     }

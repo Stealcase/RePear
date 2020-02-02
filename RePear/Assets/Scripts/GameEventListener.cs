@@ -5,30 +5,38 @@
 // Date:   10/04/17
 // ----------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 
-    public class GameEventListener : MonoBehaviour
+public class GameEventListener : MonoBehaviour, IEventListener
     {
+
+
         [Tooltip("Event to register with.")]
         public GameEvent Event;
 
         [Tooltip("Response to invoke when Event is raised.")]
         public UnityEvent Response;
 
-        private void OnEnable()
+        public void OnEnable()
         {
             Event.RegisterListener(this);
         }
 
-        private void OnDisable()
+        public void OnDisable()
         {
             Event.UnregisterListener(this);
         }
 
         public void OnEventRaised()
         {
-            Response.Invoke();
+            
+                Response.Invoke();
+                
         }
+
     }

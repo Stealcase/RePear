@@ -3,12 +3,19 @@ using UnityEngine;
 
     public class Button : UnityEngine.MonoBehaviour, IInteractable
     {
-        public GameEvent interactionPossible, interactionNotPossible, buttonPressed;
-        
+        public GameEvent interactionPossible, interactionNotPossible, buttonPressed, buttonDenied;
+        public bool isButtonCooldown = false;
         public void Use()
         {
-            buttonPressed.Raise();
-            print("Use was raised");
+            if(!isButtonCooldown)
+            {
+                buttonPressed.Raise();
+            }
+            else
+            {
+                buttonDenied.Raise();
+            }
+            
         }
 
         public void DisplayPrompt()

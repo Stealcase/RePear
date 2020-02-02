@@ -9,15 +9,16 @@ namespace UnityTemplateProjects
     {
         public GameObject pearPrefab;
         public IntVariable pearCounter;
-        private List<GameObject> pears;
+        public GameObjectList pears;
+        private List<GameObject> pearList;
         public Transform spawnPosition;
         public GameEvent pearSpawned;
         public int i = 200;
+        public int pearsPerPress =1;
 
         public void Start()
         {
-            pears = new List<GameObject>();
-            StartCoroutine("NumberedSpawner", 0.1f);
+            pearList = new List<GameObject>();
         }
 
         public IEnumerator NumberedSpawner()
@@ -30,18 +31,37 @@ namespace UnityTemplateProjects
                 print("pear spawned");
                 k++;
             }
-            
+
+        }
+
+        public void IncreasePearsPerPress()
+        {
+            pearsPerPress++;
         }
         public void SpawnPear() //This is the only function that should spawn pears. So give this thing all the attention it needs to do that efficiently
         {
-            pears.Add(Instantiate(pearPrefab, spawnPosition));
-            pearCounter.ApplyChange(+1);
-            pearSpawned.Raise();
+            //pearList.Add(Instantiate(pearPrefab, spawnPosition));
+            
+            StartCoroutine(PearRoutine());
+          
+        }
+
+        public IEnumerator PearRoutine()
+        {
+            int i = 0;
+            while (i < pearsPerPress)
+            {
+                pearList.Add(Instantiate(pearPrefab, spawnPosition));
+                pearCounter.ApplyChange(+1);
+                pearSpawned.Raise();
+                yield return new WaitForSeconds(0.01f);
+                i++;
+            }
         }
 
         public void DisableGravity()
         {
-            foreach (GameObject p in pears)
+            foreach (GameObject p in pearList)
             {
                 Rigidbody rb = p.GetComponent<Rigidbody>();
                 rb.useGravity = false;

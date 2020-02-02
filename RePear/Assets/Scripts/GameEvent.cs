@@ -14,8 +14,8 @@ using UnityEngine;
         /// <summary>
         /// The list of listeners that this event will notify if it is raised.
         /// </summary>
-        private readonly List<GameEventListener> eventListeners = 
-            new List<GameEventListener>();
+        private readonly List<IEventListener> eventListeners = 
+            new List<IEventListener>();
 
         public void Raise()
         {
@@ -23,13 +23,13 @@ using UnityEngine;
                 eventListeners[i].OnEventRaised();
         }
 
-        public void RegisterListener(GameEventListener listener)
+        public void RegisterListener(IEventListener listener)
         {
             if (!eventListeners.Contains(listener))
                 eventListeners.Add(listener);
         }
 
-        public void UnregisterListener(GameEventListener listener)
+        public void UnregisterListener(IEventListener listener)
         {
             if (eventListeners.Contains(listener))
                 eventListeners.Remove(listener);

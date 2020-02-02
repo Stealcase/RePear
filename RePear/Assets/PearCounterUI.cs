@@ -6,14 +6,35 @@ using UnityEngine;
 
 public class PearCounterUI : MonoBehaviour
 {
-        public TextMeshProUGUI pearNumberDisplay, numberAdded;
+        public TextMeshPro pearNumberDisplay, numberAdded;
         
         public IntVariable pearNumber;
         
 
         public void UpdatePearNumber()
         {
-                pearNumberDisplay.text = pearNumber.Value.ToString();
+                if(pearNumber.Value < 10)
+                { 
+                        pearNumberDisplay.text = "00" + pearNumber.Value.ToString();
+                }
+
+                else if (pearNumber.Value < 100)
+                {
+                        pearNumberDisplay.text = "0" + pearNumber.Value.ToString();
+                }
+                else if (pearNumber.Value < 1000)
+                {
+                        pearNumberDisplay.text = pearNumber.Value.ToString();
+                }
+                else if (pearNumber.Value < 10000)
+                {
+                        pearNumberDisplay.text = "0" + pearNumber.Value.ToString();
+                }
+                else if (pearNumber.Value >= 10000)
+                {
+                        pearNumberDisplay.text = "0" + pearNumber.Value.ToString();
+                }
+                
         }
         
 }
