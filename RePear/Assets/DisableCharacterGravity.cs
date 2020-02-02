@@ -7,6 +7,7 @@ public class DisableCharacterGravity : MonoBehaviour
 {
     public float force;
     private Rigidbody rb;
+    private float floatDelay = 40f;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class DisableCharacterGravity : MonoBehaviour
 
     public IEnumerator sendFlying()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(floatDelay);
         rb.AddRelativeForce(0, force,0);
     }
 
