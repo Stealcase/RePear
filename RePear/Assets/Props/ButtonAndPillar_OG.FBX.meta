@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9111708113e1c6242ba90161cf951513
+guid: 0aa40ea7c7f3cbb4b920567247f00b9a
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,19 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glow
-    second: {fileID: 2100000, guid: 5a430f83112108642ae96c1f32c1477e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Main
-    second: {fileID: 2100000, guid: 485cf760e80047e4a86f7afbeb415480, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material #40
-    second: {fileID: 6326233545876464289, guid: 8841881c96d98f9489e8174f2c6fc7c4,
-      type: 3}
+      name: No Name
+    second: {fileID: 2100000, guid: 4fbd57db3e707b54b95cbf87c7e6ae4d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -84,7 +73,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -99,11 +88,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
