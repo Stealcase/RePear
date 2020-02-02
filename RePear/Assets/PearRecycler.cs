@@ -7,7 +7,7 @@ public class PearRecycler : MonoBehaviour
 {
     public GameEvent pearRecycled;
     public GameObjectList pears;
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Pear"))
         {
