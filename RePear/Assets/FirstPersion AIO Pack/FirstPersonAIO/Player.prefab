@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 50
+  endScreen: {fileID: 11400000, guid: 8b172645525bf324487d2db98bc0ef46, type: 2}
 --- !u!114 &6345803848739363866
 MonoBehaviour:
   m_ObjectHideFlags: 0

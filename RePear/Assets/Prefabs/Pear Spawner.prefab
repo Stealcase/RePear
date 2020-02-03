@@ -51,6 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pearPrefab: {fileID: 6735156313333829613, guid: 7981ea04a3bf85f4ab7797c74e98d3ea,
     type: 3}
+  gravPrefab: {fileID: 6735156313333829613, guid: ae96248f92043ee4e9601c8b087e7616,
+    type: 3}
   pearCounter: {fileID: 11400000, guid: bccc720dbcc28b8458c268bc985a494d, type: 2}
   pearAdder: {fileID: 11400000, guid: 7c4237205cd312d41a85dc63013e7624, type: 2}
   pears: {fileID: 11400000, guid: f9f28f87ce044264faf212a6da8b36ac, type: 2}
@@ -60,6 +62,7 @@ MonoBehaviour:
   i: 0
   multiplierFloat: 0.7
   multiplier: 1
+  isGravityOff: 0
 --- !u!114 &5193992976488037367
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,13 +14,24 @@ using UnityEngine;
         /// <summary>
         /// The list of listeners that this event will notify if it is raised.
         /// </summary>
+        
         private readonly List<IEventListener> eventListeners = 
             new List<IEventListener>();
 
+        public bool disabled;
+
         public void Raise()
         {
-            for(int i = eventListeners.Count -1; i >= 0; i--)
-                eventListeners[i].OnEventRaised();
+            if(disabled)
+            {
+                return;
+            }
+            else
+            {
+                for(int i = eventListeners.Count -1; i >= 0; i--)
+                    eventListeners[i].OnEventRaised();
+            }
+            
         }
 
         public void RegisterListener(IEventListener listener)

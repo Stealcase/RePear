@@ -23,6 +23,6 @@ using UnityEngine.Audio;
             }
             source.PlayOneShot(clips[number]);
             number++;
-            
+
         }
     }

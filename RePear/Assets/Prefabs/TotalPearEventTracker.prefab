@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120011107498609880}
   - component: {fileID: 1120011107498609883}
+  - component: {fileID: 1051286828}
   m_Layer: 0
   m_Name: TotalPearEventTracker
   m_TagString: Untagged
@@ -61,8 +62,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: da14ae248ed0b044fa93215afb0a57d8, type: 2}
   - {fileID: 11400000, guid: ab24a3c7dfa1ce14b988a04398263044, type: 2}
   - {fileID: 11400000, guid: fa3d61dada69e454e997107459aa0128, type: 2}
+  - {fileID: 11400000, guid: e8a906bbebd8490449d988a0fd019746, type: 2}
   - {fileID: 11400000, guid: 2d2dca7d0dd3da24fb26c42a79619e83, type: 2}
-  - {fileID: 11400000, guid: 7b2a858a0331a314a8a7e5e892ad87df, type: 2}
   - {fileID: 11400000, guid: 8484b8de8b1d44c4db10dc26f1c62227, type: 2}
   - {fileID: 11400000, guid: 376ef5c11f4476048880a19c01dc965a, type: 2}
   - {fileID: 11400000, guid: ee929ab58c7aea046b811d001690eaf1, type: 2}
@@ -70,5 +71,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2191c8134c7eb9c4b9a787a4f550d563, type: 2}
   - {fileID: 11400000, guid: 6e69f5c56fa524d46ab448436e535977, type: 2}
   - {fileID: 11400000, guid: f7230185969f4884fb236558d62319a6, type: 2}
-  valueThresholds: 010000000300000006000000090000000c0000000e00000011000000170000002c000000440000005a00000082000000a6000000c8000000f4010000bc0200005c110000b31500000f270000983a0000a861000050c3000080380100
+  valueThresholds: 010000000300000006000000090000000c0000000e00000011000000170000002c000000440000005a00000082000000a6000000c8000000f4010000bc020000e8030000dc050000b80b0000983a0000a861000050c3000080380100
   audioEvent: {fileID: 11400000, guid: 46d147449a2201a4cba680b8c106b41a, type: 2}
+--- !u!114 &1051286828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120011107498609881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3742057f9c28025448be5d0677b5b1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b7b0bf2645de8734d8900c8139d68eff, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1120011107498609883}
+        m_MethodName: CheckThreshold
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4303215460127260661}
   - component: {fileID: 4303215460127260662}
   - component: {fileID: 4303215460127260663}
+  - component: {fileID: 2041929744}
   m_Layer: 0
   m_Name: Sound Player
   m_TagString: Untagged
@@ -51,7 +52,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 13
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -142,11 +143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
+  - {fileID: 8300000, guid: c76853d59bb405a4cad64bc818d2004f, type: 3}
   - {fileID: 8300000, guid: fc0c718b94d9faf49b716bde299ac565, type: 3}
   - {fileID: 8300000, guid: ea1a469849a37a947bf05c6fd832fef6, type: 3}
   - {fileID: 8300000, guid: 1643077df783c394a9f6ed087e39afb5, type: 3}
   - {fileID: 8300000, guid: d295ac1d62b6d4643b5615b8da5b1edc, type: 3}
-  - {fileID: 8300000, guid: db8a252d1e44ec54abb736cc75ba3a5a, type: 3}
+  - {fileID: 8300000, guid: a99aabe22f6663640b35a41156669301, type: 3}
   - {fileID: 8300000, guid: e53eb438935c19745a94f01f0a8c7474, type: 3}
   - {fileID: 8300000, guid: ba552a65a676b8f4eb57de3a866f102e, type: 3}
   - {fileID: 8300000, guid: 08b187715fdda4a44b95aa237848a88e, type: 3}
@@ -156,10 +158,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c06e614db8c7e134abb27af9cd82e630, type: 3}
   - {fileID: 8300000, guid: 080fa45185911e345b9e4e0128cd1b75, type: 3}
   - {fileID: 8300000, guid: 3d1ac96b4fb5afc41bdc443bd06b15df, type: 3}
-  - {fileID: 8300000, guid: b3d5709ec4b5aa9439959b482caad932, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: a4fd8364c38f4324c9c9478814bf5ce6, type: 3}
+  - {fileID: 8300000, guid: 31e75c2aa693954409d5e4455bb2d7f1, type: 3}
+  - {fileID: 8300000, guid: a129b5687dfe16d44b92a1ff02419c87, type: 3}
+  - {fileID: 8300000, guid: 012777c5d997a4f468b1e4a531992c29, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -192,6 +194,44 @@ MonoBehaviour:
       - m_Target: {fileID: 4303215460127260662}
         m_MethodName: StackAudioAndPlay
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2041929744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303215460127260657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3742057f9c28025448be5d0677b5b1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2d2dca7d0dd3da24fb26c42a79619e83, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4303215460127260661}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4303215460127260657}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

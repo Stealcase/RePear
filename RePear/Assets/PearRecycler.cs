@@ -12,7 +12,7 @@ public class PearRecycler : MonoBehaviour
         if (other.gameObject.CompareTag("Pear"))
         {
             pears.objects.Remove(other.gameObject);
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             pearRecycled.Raise();
             
         }

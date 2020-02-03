@@ -11,26 +11,18 @@ public class EventThresholdTracker : MonoBehaviour
     public List<GameEvent> events;
     public List<int> valueThresholds;
     public GameEvent audioEvent;
-
-    private void Start()
-    {
-
-    }
-
-    private void Update()
-    {
-        CheckThreshold();
-    }
-
+    
+    
     public void CheckThreshold()
     {
-
+        
         if (intValue.Value >= valueThresholds[eventNumber.Value] && (events.Count-1) >= eventNumber.Value)
         {
             if (events[eventNumber.Value] != null)
             {
                 audioEvent.Raise();
                 events[eventNumber.Value].Raise();
+                
                 print(events[eventNumber.Value] + "Was Raised");
                 IncreaseEventNumber();
 
